@@ -401,3 +401,36 @@ gcc pendulum_tabular_paragon.c -I. -L. -lparacast -lm -o pendulum_tabular_parago
 ./pendulum_tabular_paragon --episodes 3000     
 ./pendulum_tabular_paragon --gpu              
 ./pendulum_tabular_paragon --save qtable.csv --savefit fit.csv
+
+
+Training tabular Q: episodes=1500 bins=19 use_gpu_fit=no
+[train] ep  100/1500  eps=0.937  G=87.516
+[train] ep  200/1500  eps=0.874  G=111.307
+[train] ep  300/1500  eps=0.811  G=118.032
+[train] ep  400/1500  eps=0.747  G=94.349
+[train] ep  500/1500  eps=0.684  G=83.508
+[train] ep  600/1500  eps=0.620  G=88.904
+[train] ep  700/1500  eps=0.557  G=86.979
+[train] ep  800/1500  eps=0.494  G=142.835
+[train] ep  900/1500  eps=0.430  G=97.056
+[train] ep 1000/1500  eps=0.367  G=86.853
+[train] ep 1100/1500  eps=0.304  G=196.042
+[train] ep 1200/1500  eps=0.240  G=199.989
+[train] ep 1300/1500  eps=0.177  G=85.820
+[train] ep 1400/1500  eps=0.113  G=199.494
+[train] ep 1500/1500  eps=0.050  G=85.992
+Greedy rollout: steps=200  return=142.420
+Saved rollout to rollout.csv
+Fitting Paragon NN to Q-table (supervised)…
+[wgpu] [Warn] Detected skylake derivative running on mesa i915. Clears to srgb textures will use manual shader clears.
+🚀 GPU Selected: 0x25a2 (0x10de) - Type: discrete-gpu
+[fit] epoch   50  MSE≈0.000000 (Q units)
+[fit] epoch  100  MSE≈0.000000 (Q units)
+[fit] epoch  150  MSE≈0.000000 (Q units)
+[fit] epoch  200  MSE≈0.000000 (Q units)
+[fit] epoch  250  MSE≈0.000000 (Q units)
+[fit] epoch  300  MSE≈0.000000 (Q units)
+[fit] epoch  350  MSE≈0.000000 (Q units)
+[fit] epoch  400  MSE≈0.000000 (Q units)
+[fit] eval MSE≈0.000000 (original Q units) on 1024 random states
+Avg return over last 50 episodes: 107.979
