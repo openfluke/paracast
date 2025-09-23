@@ -390,3 +390,14 @@ gcc grid_rl_paragon_mt.c -I. -L. -lparacast -lncursesw -lm -pthread \
 
 
 ./grid_rl_paragon_mt --workers 4 --episodes 1500 --start 4,0 --demoeps 8 --save grid_q_best.json
+
+
+
+# Pendulum
+
+gcc pendulum_tabular_paragon.c -I. -L. -lparacast -lm -o pendulum_tabular_paragon   -Wl,-rpath,'$ORIGIN'
+
+./pendulum_tabular_paragon                     
+./pendulum_tabular_paragon --episodes 3000     
+./pendulum_tabular_paragon --gpu              
+./pendulum_tabular_paragon --save qtable.csv --savefit fit.csv
