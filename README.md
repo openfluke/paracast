@@ -373,3 +373,20 @@ GPU warmup...
 
 === Summary ===
 GPU: 3/3 successful runs, avg 4699.2 samples/sec
+
+
+# Grid RL
+
+sudo dnf install ncurses-devel
+
+LD_LIBRARY_PATH=. ./grid_rl
+
+gcc grid_rl.c -lncurses -L. -Wl,-rpath,'$ORIGIN' -lparacast -lm -o grid_rl
+
+
+./grid_rl
+gcc grid_rl_paragon_mt.c -I. -L. -lparacast -lncursesw -lm -pthread \
+  -Wl,-rpath,'$ORIGIN' -o grid_rl_paragon_mt
+
+
+./grid_rl_paragon_mt --workers 4 --episodes 1500 --start 4,0 --demoeps 8 --save grid_q_best.json
