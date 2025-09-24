@@ -434,3 +434,51 @@ Fitting Paragon NN to Q-table (supervised)…
 [fit] epoch  400  MSE≈0.000000 (Q units)
 [fit] eval MSE≈0.000000 (original Q units) on 1024 random states
 Avg return over last 50 episodes: 107.979
+
+
+
+
+
+# Python example outputs
+
+python paracast_demo.py
+
+🔧 create model
+
+▶️  forward (cpu) — before any training
+forward time: 0.0036s
+output (first 10): [1.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000]  | argmax = 0
+
+🎓 first train (cpu) — nudging to class 9, 10 epochs, LR=0.1
+train time: 10.0457s
+▶️  forward (cpu) — after first train
+forward time: 0.0037s
+output (first 10): [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.993]  | argmax = 9
+Change in argmax: 0 -> 9
+
+🎓 second train (cpu) — now nudging to class 0, 10 epochs, LR=0.1
+train time: 10.0005s
+▶️  forward (cpu) — after second train
+forward time: 0.0036s
+output (first 10): [0.993, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003]  | argmax = 0
+Change in argmax: 9 -> 0
+
+📊 Training summary:
+  Total train time: 20.0462s
+  Forward times: before=0.0036s, after1=0.0037s, after2=0.0036s
+
+🚀 cpu stress (big batches)
+cpu timing (multiple big batches)…
+round 1: 278.1 samples/s  (batch time: 14.728s, measured ns: 14.728s)
+round 2: 282.5 samples/s  (batch time: 14.497s, measured ns: 14.497s)
+round 3: 287.8 samples/s  (batch time: 14.234s, measured ns: 14.234s)
+
+Overall avg: 282.8 samples/s over 3 rounds
+
+🖨️ sample outputs from big batch:
+batch[0] (first 10): [0.993, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003]  | argmax = 0
+
+Full output vectors comparison:
+Before train: [1.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000, 0.000]
+After first train: [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.993]
+After second train: [0.993, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.003]
