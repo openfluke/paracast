@@ -1,0 +1,15 @@
+/home/watson/git/paracast/dist/ParacastDemo/bin/Release/net8.0/ParacastDemo
+/home/watson/git/paracast/dist/ParacastDemo/bin/Release/net8.0/ParacastDemo.deps.json
+/home/watson/git/paracast/dist/ParacastDemo/bin/Release/net8.0/ParacastDemo.runtimeconfig.json
+/home/watson/git/paracast/dist/ParacastDemo/bin/Release/net8.0/ParacastDemo.dll
+/home/watson/git/paracast/dist/ParacastDemo/bin/Release/net8.0/ParacastDemo.pdb
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.GeneratedMSBuildEditorConfig.editorconfig
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.AssemblyInfoInputs.cache
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.AssemblyInfo.cs
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.csproj.CoreCompileInputs.cache
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.sourcelink.json
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.dll
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/refint/ParacastDemo.dll
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.pdb
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ParacastDemo.genruntimeconfig.cache
+/home/watson/git/paracast/dist/ParacastDemo/obj/Release/net8.0/ref/ParacastDemo.dll
